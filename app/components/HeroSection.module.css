@@ -1,0 +1,240 @@
+.heroContainer {
+  position: relative;
+  height: 350vh; /* Increased from 250vh to make the scroll effects slower and calmer */
+  width: 100%;
+  background: #000;
+}
+
+.stickyLayer {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bgLayer {
+  position: absolute;
+  inset: -10%; /* Slight bleed to prevent edge clipping during zoom */
+  z-index: 0;
+  will-change: transform;
+}
+
+.textLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the block of text */
+  align-items: center;
+  text-align: center;
+  padding: 0 var(--space-md);
+  /* Provide a slight gap so they aren't on top of each other */
+  gap: 2vh;
+}
+
+.textItem {
+  width: 100%;
+  will-change: opacity;
+  display: flex;
+  align-items: center;
+}
+
+.textItemLeft {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.textItemCenter {
+  justify-content: center;
+  text-align: center;
+}
+
+.textItemRight {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.fgLayer {
+  position: absolute;
+  top: -5vh; /* Shifted down to lower the building */
+  bottom: -20vh; /* Shifted down by 15vh overall */
+  left: -5%;
+  right: -5%;
+  z-index: 2;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: linear-gradient(to top, var(--color-bg-deep) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.cardsLayer {
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  padding: 0 var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+  will-change: transform, opacity;
+  pointer-events: auto; /* Re-enable clicks for cards */
+}
+
+/* Typography for floating layer */
+.floatingTitle {
+  font-family: var(--font-display);
+  font-size: min(10vw, 4rem); /* Safe scaling for mobile to prevent APARTAMENTOS from cutting off */
+  font-weight: 900;
+  color: var(--color-white);
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) {
+  .floatingTitle {
+    font-size: clamp(3rem, 8.5vw, 10rem);
+  }
+}
+
+.floatingAccent {
+  display: block;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-sage-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.floatingTagline {
+  font-family: var(--font-body);
+  font-size: clamp(0.75rem, 2vw, 1.25rem);
+  color: var(--color-white);
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-top: var(--space-lg);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Action Cards */
+.actionCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xs); /* Smaller gap on mobile */
+  width: 100%;
+}
+
+.actionCard {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  min-height: 90px; /* Reduced height on mobile so they don't cover the screen */
+  transition: all var(--transition-base);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #111; /* Fallback for when image has low opacity */
+}
+
+.actionCard:hover,
+.actionCard:active {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.cardBg {
+  position: absolute;
+  inset: 0;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.15;
+}
+
+.actionCard:hover .cardBg,
+.actionCard:active .cardBg {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+}
+
+.cardLabel {
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1;
+  margin-top: 0.25rem;
+}
+
+.cardSub {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-accent-light);
+  letter-spacing: 0.1em;
+  margin-top: 0.5rem;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .actionCards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .actionCard {
+    min-height: 220px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .actionCard {
+    min-height: 260px;
+  }
+  .cardTitle {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile Fixes for the Building Layer */
+@media (max-width: 767px) {
+  .fgLayer {
+    top: auto;
+    bottom: 15vh; /* Counteract the initial y:15vh transform so the building doesn't fall off screen */
+    height: 70vh; 
+    left: -5%;
+    right: -5%;
+  }
+  .textLayer {
+    padding-bottom: 20vh; /* Lift the text layer slightly on mobile to ensure visibility */
+  }
+}

@@ -1,0 +1,150 @@
+.section {
+  background: var(--color-bg-cream);
+  padding: var(--space-xl) 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+}
+
+.banner {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.bannerBg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-terracotta) 0%,
+    #b85a3a 50%,
+    #8a4028 100%
+  );
+}
+
+.bannerBg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(255, 255, 255, 0.1), transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(0, 0, 0, 0.15), transparent 50%);
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.promoBadge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-white);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2); }
+  50% { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
+}
+
+.bannerTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 900;
+  color: var(--color-white);
+  line-height: 1.05;
+  margin-bottom: var(--space-md);
+}
+
+.bannerAccent {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.bannerText {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+
+.bannerText strong {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+/* Features */
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.feature {
+  text-align: center;
+}
+
+.featureNumber {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-white);
+  line-height: 1;
+}
+
+.featureLabel {
+  display: block;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+}
+
+.featureDivider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
