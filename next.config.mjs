@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/primaveralife',
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -16,3 +14,4 @@ const nextConfig = {
 };
 
 export default nextConfig;
+
