@@ -73,7 +73,7 @@ export default function Footer() {
           <div className={styles.column}>
             <h4 className={styles.columnTitle}>Contacto</h4>
             <div className={styles.contactLinks}>
-              <a href="https://wa.me/57XXXXXXXXXX" className={styles.contactLink} id="footer-whatsapp">
+              <a href="https://wa.me/573225567048" className={styles.contactLink} id="footer-whatsapp">
                 WhatsApp
               </a>
               <a href="mailto:info@primaveralife.com.co" className={styles.contactLink} id="footer-email">

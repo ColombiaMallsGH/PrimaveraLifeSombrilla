@@ -89,7 +89,7 @@ export default function OficinaSection() {
 
             <div className="reveal reveal-delay-4">
               <a 
-                href="https://wa.me/573117457906?text=Hola,%20quiero%20alquilar%20mi%20oficina" 
+                href="https://wa.me/573225567048?text=Hola,%20quiero%20alquilar%20mi%20oficina" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-dark" 

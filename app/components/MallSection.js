@@ -101,7 +101,7 @@ export default function MallSection() {
                 Únete al ecosistema comercial más innovador de Armenia.
               </p>
               <a 
-                href="https://wa.me/573117457906?text=Hola,%20quiero%20conocer%20los%20espacios%20disponibles%20en%20el%20Mall" 
+                href="https://wa.me/573225567048?text=Hola,%20quiero%20conocer%20los%20espacios%20disponibles%20en%20el%20Mall" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary" 

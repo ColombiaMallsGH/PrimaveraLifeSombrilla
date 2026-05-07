@@ -229,7 +229,7 @@ export default function HousesSection() {
           </div>
           <div className="reveal" style={{ textAlign: 'center', marginTop: 'var(--space-lg)' }}>
             <a 
-              href="https://wa.me/573117457906?text=Hola,%20quiero%20agendar%20una%20visita%20a%20los%20apartamentos" 
+              href="https://wa.me/573225567048?text=Hola,%20quiero%20agendar%20una%20visita%20a%20los%20apartamentos" 
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline-dark btn-lg" 

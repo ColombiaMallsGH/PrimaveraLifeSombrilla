@@ -58,7 +58,7 @@ export default function ParkingSection() {
 
             <div className={styles.actions}>
               <a
-                href="https://www.google.com/maps/place/Primavera+Life+Mall/@4.5549737,-75.6564619,17z/data=!4m10!1m2!2m1!1sPrimavera+Life+Mall+Cra.+13+#16N+-+79,+Armenia,+Quind!3m6!1s0x8e38f5b7a2883031:0xef7df9f70ba2dd99!8m2!3d4.5549737!4d-75.6564619!15sCjVQcmltYXZlcmEgTGlmZSBNYWxsIENyYS4gMTMgIzE2TiAtIDc5LCBBcm1lbmlhLCBRdWluZFoyIjBwcmltYXZlcmEgbGlmZSBtYWxsIGNyYSAxMyAjMTZuIDc5IGFybWVuaWEgcXVpbmSSAQ9zaG9wcGluZ19jZW50ZXLgAQA!16s%2Fg%2F11p5ks7p65?entry=ttu"
+                href="https://www.google.com/maps/place/Primavera+Life+Mall,+Cra.+13+%2316N+-+79,+Armenia,+Quind%C3%ADo/@4.5549737,-75.6564619,17z"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary btn-lg"

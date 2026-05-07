@@ -58,7 +58,7 @@ export default function Header() {
             </a>
           ))}
           <a 
-            href="https://wa.me/573117457906?text=Hola,%20quiero%20saber%20m%C3%A1s%20de%20Primavera%20Life" 
+            href="https://wa.me/573225567048?text=Hola,%20quiero%20saber%20m%C3%A1s%20de%20Primavera%20Life" 
             target="_blank"
             rel="noopener noreferrer"
             className={`btn btn-primary ${styles.navCta}`} 
