@@ -108,7 +108,8 @@ export default function HeroSection() {
             <div 
               className={styles.actionCard} 
               id="cta-mall"
-              onClick={() => setLightboxImage("https://res.cloudinary.com/difxixf4j/image/upload/q_auto/f_auto/v1777736914/DJI_0450_dm8bav.avif")}
+              onClick={() => window.open('https://mall.primaveralife.com.co', '_blank')}
+              style={{ cursor: 'pointer' }}
             >
               <motion.div className={styles.cardBg} layoutId="https://res.cloudinary.com/difxixf4j/image/upload/q_auto/f_auto/v1777736914/DJI_0450_dm8bav.avif">
                 <Image 
@@ -130,7 +131,8 @@ export default function HeroSection() {
             <div 
               className={styles.actionCard} 
               id="cta-houses"
-              onClick={() => setLightboxImage("https://res.cloudinary.com/difxixf4j/image/upload/q_auto/f_auto/v1777736975/envato-labs-image-edit_-_2026-01-13T153908.300_y07pnu.avif")}
+              onClick={() => window.location.href = '/apartamentos'}
+              style={{ cursor: 'pointer' }}
             >
               <motion.div className={styles.cardBg} layoutId="https://res.cloudinary.com/difxixf4j/image/upload/q_auto/f_auto/v1777736975/envato-labs-image-edit_-_2026-01-13T153908.300_y07pnu.avif">
                 <Image 

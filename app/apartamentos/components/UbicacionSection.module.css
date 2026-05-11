@@ -1,0 +1,122 @@
+.section {
+  background: var(--color-bg-cream);
+  padding: var(--space-2xl) 0;
+  overflow: hidden;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* Text */
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.label {
+  color: var(--color-sage);
+  display: block;
+}
+
+.title {
+  color: var(--color-text-dark);
+}
+
+.titleAccent {
+  color: var(--color-sage);
+}
+
+/* Address */
+.addressBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--color-bg-warm);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.addressIcon {
+  color: var(--color-sage);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.addressMain {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text-dark);
+  margin-bottom: 0.2rem;
+}
+
+.addressSub {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.addressRef {
+  font-size: 0.78rem;
+  color: var(--color-sage);
+  font-weight: 500;
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+/* Buttons */
+.contactButtons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contactBtn {
+  justify-content: center;
+  width: 100%;
+}
+
+/* Map */
+.mapWrapper {
+  width: 100%;
+  height: 350px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-md);
+}
+
+/* Tablet+ */
+@media (min-width: 768px) {
+  .inner {
+    flex-direction: row;
+    align-items: stretch;
+    gap: var(--space-2xl);
+  }
+
+  .textBlock {
+    flex: 0 0 400px;
+    justify-content: center;
+  }
+
+  .mapWrapper {
+    flex: 1;
+    height: auto;
+    min-height: 400px;
+  }
+
+  .contactButtons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contactBtn {
+    width: auto;
+    flex: 1;
+  }
+}
