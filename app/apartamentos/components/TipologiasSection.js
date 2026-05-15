@@ -101,8 +101,35 @@ const tipologias = [
 
 export default function TipologiasSection() {
   const sectionRef = useRef(null);
+  const tabsRef = useRef(null);
+  const touchStartX = useRef(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const active = tipologias[activeIndex];
+
+  /* Scroll active tab into view */
+  useEffect(() => {
+    if (tabsRef.current) {
+      const activeTab = tabsRef.current.querySelector('[data-active="true"]');
+      if (activeTab) {
+        activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+  }, [activeIndex]);
+
+  /* Swipe handlers for card */
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  const handleTouchEnd = (e) => {
+    const delta = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 50) {
+      if (delta > 0 && activeIndex < tipologias.length - 1) {
+        setActiveIndex(activeIndex + 1);
+      } else if (delta < 0 && activeIndex > 0) {
+        setActiveIndex(activeIndex - 1);
+      }
+    }
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -136,7 +163,7 @@ export default function TipologiasSection() {
       </div>
 
       {/* Tab Navigation */}
-      <div className={styles.tabsWrapper}>
+      <div className={styles.tabsWrapper} ref={tabsRef}>
         <div className={styles.tabs}>
           {tipologias.map((t, i) => (
             <button
@@ -144,6 +171,7 @@ export default function TipologiasSection() {
               className={`${styles.tab} ${i === activeIndex ? styles.tabActive : ''}`}
               onClick={() => setActiveIndex(i)}
               id={`tab-${t.id}`}
+              data-active={i === activeIndex ? 'true' : 'false'}
               style={i === activeIndex ? { '--tab-accent': t.accent } : {}}
             >
               {t.name}
@@ -153,7 +181,12 @@ export default function TipologiasSection() {
       </div>
 
       {/* Active Card */}
-      <div className={`container ${styles.cardContainer}`} key={active.id}>
+      <div
+        className={`container ${styles.cardContainer}`}
+        key={active.id}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         <div className={styles.card} style={{ background: active.gradient }}>
 
           {/* Image */}

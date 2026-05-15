@@ -5,6 +5,8 @@ import TipologiasSection from './components/TipologiasSection';
 import AmenidadesSection from './components/AmenidadesSection';
 import UbicacionSection from './components/UbicacionSection';
 import Footer from './components/Footer';
+import WhatsAppFloat from './components/WhatsAppFloat';
+import './apartamentos.css';
 
 export const metadata = {
   title: "Apartamentos en Alquiler — Primavera Life House | Armenia, Quindío",
@@ -25,6 +27,10 @@ export default function ApartamentosPage() {
       <AmenidadesSection />
       <UbicacionSection />
       <Footer />
+      <WhatsAppFloat
+        phone="573225567048"
+        message="Hola, me interesa un apartamento en Primavera Life House"
+      />
     </main>
   );
 }

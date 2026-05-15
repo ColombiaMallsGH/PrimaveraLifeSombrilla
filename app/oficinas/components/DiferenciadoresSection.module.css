@@ -1,0 +1,93 @@
+/* ========================================
+   DIFERENCIADORES SECTION
+   ======================================== */
+
+.section {
+  position: relative;
+  padding: var(--space-2xl) 0;
+  background: var(--color-bg-deep);
+  color: var(--color-white);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.header {
+  text-align: center;
+}
+
+.label {
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.title {
+  color: var(--color-white);
+}
+
+.accent {
+  color: var(--color-accent);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Cards */
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  background: var(--glass-bg-light);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+  border-color: rgba(200, 169, 110, 0.25);
+}
+
+.cardIcon {
+  color: var(--color-accent);
+  margin-bottom: 0.25rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--color-text-light);
+  line-height: 1.65;
+}

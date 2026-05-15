@@ -34,6 +34,7 @@
 /* Tabs */
 .tabsWrapper {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding: 0 var(--space-md);
@@ -43,14 +44,19 @@
 .tabsWrapper::-webkit-scrollbar { display: none; }
 
 .tabs {
-  display: flex;
+  display: inline-flex;
   gap: 0.5rem;
-  width: max-content;
-  margin: 0 auto;
+  min-width: max-content;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
   padding: 0.35rem;
+}
+
+@media (min-width: 768px) {
+  .tabs {
+    margin: 0 auto;
+  }
 }
 
 .tab {

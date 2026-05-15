@@ -125,6 +125,24 @@
   background: linear-gradient(to right, transparent, var(--color-sage), transparent);
 }
 
+/* Mobile: stack stats to avoid overflow */
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .statCard:last-child {
+    grid-column: 1 / -1;
+    max-width: 60%;
+    justify-self: center;
+  }
+
+  .statValue {
+    font-size: 1.5rem;
+  }
+}
+
 /* Tablet+ */
 @media (min-width: 768px) {
   .inner {

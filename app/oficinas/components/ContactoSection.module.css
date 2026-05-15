@@ -1,0 +1,89 @@
+/* ========================================
+   CONTACTO / CTA SECTION
+   ======================================== */
+
+.section {
+  position: relative;
+  padding: var(--space-3xl) 0;
+  background: var(--color-bg-medium);
+  text-align: center;
+  overflow: hidden;
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.labelLine {
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--color-white);
+  letter-spacing: -0.01em;
+}
+
+.accent {
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.description {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1.1rem 2.5rem;
+  background: var(--color-accent);
+  color: var(--color-bg-deep);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: all var(--transition-base);
+}
+
+.cta:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}

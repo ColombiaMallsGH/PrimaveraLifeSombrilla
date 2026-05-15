@@ -1,0 +1,65 @@
+/* ========================================
+   FOOTER — Primavera Office
+   ======================================== */
+
+.footer {
+  position: relative;
+  z-index: 20;
+  padding: 1.25rem 2rem;
+  background: var(--color-bg-deep);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.credit {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.creditLink {
+  color: var(--color-accent);
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.creditLink:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Social links */
+.social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socialLink {
+  color: rgba(255, 255, 255, 0.4);
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+}
+
+.socialLink:hover {
+  color: var(--color-accent);
+}
+
+/* Hide social on mobile */
+@media (max-width: 768px) {
+  .social {
+    display: none;
+  }
+
+  .inner {
+    justify-content: center;
+  }
+}

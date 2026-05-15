@@ -154,7 +154,8 @@ export default function HeroSection() {
             <div 
               className={styles.actionCard} 
               id="cta-oficinas"
-              onClick={() => setLightboxImage("https://res.cloudinary.com/difxixf4j/image/upload/q_auto/f_auto/v1777737078/envato-labs-image-edit_-_2026-01-16T121915.719_dwisvw.avif")}
+              onClick={() => window.location.href = '/oficinas'}
+              style={{ cursor: 'pointer' }}
             >
               <motion.div className={styles.cardBg} layoutId="https://res.cloudinary.com/difxixf4j/image/upload/q_auto/f_auto/v1777737078/envato-labs-image-edit_-_2026-01-16T121915.719_dwisvw.avif">
                 <Image 

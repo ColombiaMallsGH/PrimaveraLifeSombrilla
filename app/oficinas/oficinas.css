@@ -1,0 +1,6 @@
+/* Oficinas page — hide global SocialSidebar on mobile */
+@media (max-width: 768px) {
+  aside[aria-label="Redes sociales Primavera Life"] {
+    display: none !important;
+  }
+}
